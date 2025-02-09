@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nadir Daily Schedule</title>
+  <style>
+    /* Resetting some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 0 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #f9f9f9;
+      transition: background-color 0.3s ease;
+    }
+
+    td:hover {
+      background-color: #f1f1f1;
+    }
+
+    .time-slot {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .activity {
+      font-style: italic;
+      color: #555;
+    }
+
+    .free-time {
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .sleep-time {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .activity-cell {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .activity-cell.free-time {
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .activity-cell.sleep-time {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      font-size: 18px;
+      margin-top: 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Media query for smaller devices */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      table {
+        font-size: 16px;
+      }
+
+      th, td {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nadir Daily Schedule</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-slot">08:30 - 12:00</td>
+          <td class="activity-cell">
+            <a href="https://youtube.com/playlist?list=PLY917b_Zh4reH0Ke8C5Z2vA8YKQR7_YWu&feature=shared" target="_blank" style="text-decoration: none; color: inherit;">
+              Islamic (Study)
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="time-slot">13:00 - 14:30</td>
+          <td class="activity-cell">
+            <a href="https://youtube.com/playlist?list=PLY917b_Zh4rcq891X3jJo0F09MEjeFOio&feature=shared" target="_blank" style="text-decoration: none; color: inherit;">
+              Geography (Study)
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="time-slot">15:00 - 17:00</td>
+          <td class="activity-cell">
+            <a href="https://youtube.com/playlist?list=PLY917b_Zh4reFuMmzL_HS40egdqzu-cFo&feature=shared" target="_blank" style="text-decoration: none; color: inherit;">
+              France (Study)
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="time-slot">18:00 - 19:00</td>
+          <td class="activity-cell">
+            <a href="https://youtube.com/playlist?list=PLY917b_Zh4renoDD7FhZRBThgczOSzLaz&feature=shared" target="_blank" style="text-decoration: none; color: inherit;">
+              Arabic (Study)
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="time-slot">19:00 - 21:00</td>
+          <td class="activity-cell free-time">Free Time</td>
+        </tr>
+        <tr>
+          <td class="time-slot">21:00</td>
+          <td class="activity-cell sleep-time">Sleep</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button onclick="confirmSchedule()">Confirm Schedule</button>
+
+    <div class="footer">
+      <p>Stay productive and organized! 🗓️</p>
+    </div>
+  </div>
+
+  <script>
+    // Function to display a confirmation alert when the button is clicked
+    function confirmSchedule() {
+      alert("Your schedule is confirmed! Stay on track and productive.");
+    }
+  </script>
+</body>
+</html>
